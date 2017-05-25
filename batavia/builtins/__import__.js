@@ -30,7 +30,7 @@ function __import__(args, kwargs) {
             var context = args[1].__name__.split('.')
 
             // Adjust level to deal with imports inside a __init__.py file
-            if (args[1].__file__.endswith('__init__.py')) {
+            if (args[1].__file__.endswith('/__init__.py')) {
                 level = level - 1
             }
 
